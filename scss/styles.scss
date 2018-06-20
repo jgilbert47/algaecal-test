@@ -1,0 +1,394 @@
+@import "_fonts.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-family: "Glober_Bold_Free", Arial, Helvetica, sans-serif;
+	font-size: 2.1rem;
+}
+
+h2, h3, h4 {
+	font-family: "Glober_Bold_Free", Arial, Helvetica, sans-serif;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	color: $links;
+
+	&:hover, &:focus {
+		color: $linkHover;
+	}
+}
+
+img {
+    max-width: 100%;
+}
+
+.button {
+	background-color: $buttonColor;
+	border: none;
+	-webkit-box-shadow: 0 6px 0 0 $buttonBottomColor;
+	-moz-box-shadow: 0 6px 0 0 $buttonBottomColor;
+	box-shadow: 0 6px 0 0 $buttonBottomColor;
+	display: block;
+	font-weight: bold;
+	color: white;
+}
+
+.button-hover {
+	background-color: $buttonHoverColor;
+	-webkit-box-shadow: 0 6px 0 0 $buttonBottomHoverColor;
+	-moz-box-shadow: 0 6px 0 0 $buttonBottomHoverColor;
+	box-shadow: 0 6px 0 0 $buttonBottomHoverColor;	
+	color: white;
+}
+
+#telephone {
+    font-weight: bold;
+
+    p {
+	    margin: 0;
+	    font-size: 1.25rem;
+	}
+
+	#default-number a {
+	    color: $phoneNumber;
+	}
+
+	.phone {
+		@include background-img('../images/phone_icon.png', left 2px);
+	    padding: 0 0 0 27px;
+	    font-weight: initial;
+	    font-size: 1rem;
+	}
+}
+
+header {	
+	@include background-img('../images/green_bkgrnd.jpg', top center, no-repeat, cover);
+}
+
+#intro {
+    color: $introText;
+
+    h1 {
+	    .decorated {
+		    overflow: hidden;
+		}
+	}
+
+    .underline {
+    	@include background-img('../images/underline.png', bottom center, repeat-x);
+    	font-size: 2.75rem;
+	}
+
+	.side-lines {
+	    position: relative;
+	    display: inline-block;
+	    text-transform: uppercase;
+
+	    &:before, &:after {
+		    content: "";
+		    position: absolute;
+		    border-top: 2px solid white;
+		    top: 1.2rem;
+		    width: 1000px;
+		}
+
+		&:before {
+		    right: 100%;
+		    margin-right: 15px;
+		}
+
+		&:after {
+		    left: 100%;
+		    margin-left: 15px;
+		}
+	}
+}
+
+#intro-sub {
+	p {
+	    font-size: 1.25rem;
+	}
+}
+
+#embeded-vid {
+    border: 1px solid $videoBorder;
+}
+
+.wistia_responsive_padding {
+	padding: 56.25% 0 0 0;
+	position: relative;
+}
+
+.wistia_responsive_wrapper {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.wistia_embed {
+	height: 100%;
+	width: 100%
+}
+
+
+.product-column {
+    .product-column-wrapper {
+    	margin-top: 2rem;
+
+	    &.popular {
+	    	background-color: $accentColor;
+    		color: #ffffff;
+    		margin-top: .5rem;
+    		padding-bottom: 1px;
+    		@include box-shadow();
+
+		    .bundle-package {
+			    margin-top: 0;
+			}
+
+			.popular-text {
+			    text-transform: uppercase;
+			    padding: 0.25rem 0;
+			}
+		}
+	}
+
+	.bundle-package {
+	    position: relative;
+	    @include box-shadow();
+	    background-color: #ffffff;
+	    color: #000000;
+	    margin-top: 2.4rem;
+
+		.discount {
+			@include circle($discountBubble);
+			@include box-shadow();
+		    color: #fff;
+		    padding: 12px;
+		    font-size: 1.3rem;
+		    line-height: 1;
+		    position: absolute;
+		    top: -38px;
+		    right: -27px;
+
+		    .amount {
+			    font-size: 1.5rem;
+			    font-weight: bold;
+			    display: block;
+			}
+		}
+
+		.package-contents {
+			h2 {
+			    font-size: 1.75rem;
+			}
+			h3 {
+			    font-size: 1.4rem;
+			    color: $accentColor;
+			}
+		}
+
+		.pricing  {
+			.price {
+			    font-size: 1.6rem;
+			    font-weight: bold;
+			}
+
+			.currency {
+			    text-decoration: underline;
+			    display: inline-block;
+			    transform: translateY(-20%);
+			    font-size: .8rem;
+			}
+
+			.price-per-day {
+				@include background-img ('../images/highlight.png', center, no-repeat, contain);
+			}
+		}
+
+		.add-to-cart {
+		    position: relative;
+		    padding: .5rem;
+
+			.guarantee {
+			    position: absolute;
+			    left: 0px;
+    			top: -10px;
+    			width: 75px;
+			}
+
+			.btn-primary {
+			    @extend .button;
+			    margin-left: 50px;
+			    min-width: 145px;
+
+			    &:after {
+					@include right-arrow(white);
+				    right: -10px;
+				    top: -6px;
+				}
+
+				&:hover, &:focus, &:active {					
+				    @extend .button-hover;
+				}
+			}
+		}
+	}
+}
+
+.supplement-facts {
+	h3 {
+	    font-size: 2.2rem;
+	}
+
+	.table-container {
+	    padding: .5rem;
+	    border: 3px solid;
+	}
+
+	.table th, .table td {
+		border: none;
+	}
+
+	.amt-per-serving {
+	    border-top: 15px solid;
+	    border-bottom: 10px solid;
+
+	    th {
+		    padding: .3rem;
+		}
+	}
+
+	.supplement-header {
+		th {
+		    font-weight: normal;
+		}
+	}
+
+	.supplement-source {
+	    display: block;
+	    font-size: .9rem;
+	}
+
+	.last-with-value {
+	    border-bottom: 15px solid;
+	}
+
+	.supplement-footnote {
+	    border-top: 15px solid;
+	}
+}
+
+.guarantee-column {
+    background-image: url('../images/green_bkgrnd.jpg');
+
+    .guarantee {
+	    background-color: white;
+	}
+}
+
+.as-seen-column {
+	@include box-shadow();
+
+	.as-seen-heading {
+	    background-color: $asSeenHeading;
+	    color: white;
+	}
+
+	.as-seen-books-column {
+	    font-weight: bold;
+
+	    .as-seen-book-img {
+			img {
+			    width: 100%;
+			    max-width: 40px;
+			}
+		}
+
+		.as-seen-book-title {
+		    font-size: .8rem;
+		    text-align: left;
+		}
+	}
+}
+
+.references {
+	h2 {
+		color: $accentColor;
+		font-size: 1.7rem;
+	}
+
+	.full-references-link {
+	    font-size: 1.2rem;
+	    display: block;
+	    width: 100%;
+	    text-decoration: underline;
+	}
+}
+
+
+.buy-now {
+    position: relative;
+    padding: .5rem;
+    max-width: 350px;
+
+	.buy-now-guarantee {
+	    position: absolute;
+	    top: -12px;
+	    width: 100px;
+	}
+
+	.lg-buy-now {
+		@extend .button;
+		font-size: 1.8rem;
+    	margin-left: 60px;
+
+		&:after {
+			@include right-arrow(white);
+			right: -10px;
+			top: -6px;
+		}
+
+		&:hover, &:focus, &:active {					
+			@extend .button-hover;
+		}
+	}
+}
+
+.footer-links {
+	list-style: none;
+	margin: 0;
+
+	li {
+	    display: inline-block;
+
+	    &:after {
+		    content: "|";
+		    color: $mainTextColor;
+		    padding-left: 5px;
+		    font-weight: bold;
+		}
+
+		&:last-child:after {
+		    content: "";
+		}
+
+	    a {
+		    color: $footerLinks;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,326 @@
+/*!
+ * Web Fonts from Fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2018 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Fontfabric
+ * License URL: https://www.fontspring.com/licenses/fontfabric/webfont
+ *
+ *
+ */
+@font-face {
+  font-family: 'Glober_Thin_Free';
+  src: url("../webfonts/Glober_Thin_Free-webfont.woff2") format("woff2"), url("../webfonts/Glober_Thin_Free-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Glober_Bold_Free';
+  src: url("../webfonts/Glober_Bold_Free-webfont.woff2") format("woff2"), url("../webfonts/Glober_Bold_Free-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1 {
+  font-family: "Glober_Bold_Free", Arial, Helvetica, sans-serif;
+  font-size: 2.1rem; }
+
+h2, h3, h4 {
+  font-family: "Glober_Bold_Free", Arial, Helvetica, sans-serif; }
+
+p {
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  color: #54b8cd; }
+  a:hover, a:focus {
+    color: #008ba4; }
+
+img {
+  max-width: 100%; }
+
+.button, .product-column .bundle-package .add-to-cart .btn-primary, .buy-now .lg-buy-now {
+  background-color: #37a23e;
+  border: none;
+  -webkit-box-shadow: 0 6px 0 0 #24875b;
+  -moz-box-shadow: 0 6px 0 0 #24875b;
+  box-shadow: 0 6px 0 0 #24875b;
+  display: block;
+  font-weight: bold;
+  color: white; }
+
+.button-hover, .product-column .bundle-package .add-to-cart .btn-primary:hover, .product-column .bundle-package .add-to-cart .btn-primary:focus, .product-column .bundle-package .add-to-cart .btn-primary:active, .buy-now .lg-buy-now:hover, .buy-now .lg-buy-now:focus, .buy-now .lg-buy-now:active {
+  background-color: #319038;
+  -webkit-box-shadow: 0 6px 0 0 #24632a;
+  -moz-box-shadow: 0 6px 0 0 #24632a;
+  box-shadow: 0 6px 0 0 #24632a;
+  color: white; }
+
+#telephone {
+  font-weight: bold; }
+  #telephone p {
+    margin: 0;
+    font-size: 1.25rem; }
+  #telephone #default-number a {
+    color: #54b8cd; }
+  #telephone .phone {
+    background-image: url("../images/phone_icon.png");
+    background-position: left 2px;
+    background-repeat: no-repeat;
+    background-size: initial;
+    padding: 0 0 0 27px;
+    font-weight: initial;
+    font-size: 1rem; }
+
+header {
+  background-image: url("../images/green_bkgrnd.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#intro {
+  color: #ffffff; }
+  #intro h1 .decorated {
+    overflow: hidden; }
+  #intro .underline {
+    background-image: url("../images/underline.png");
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: initial;
+    font-size: 2.75rem; }
+  #intro .side-lines {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase; }
+    #intro .side-lines:before, #intro .side-lines:after {
+      content: "";
+      position: absolute;
+      border-top: 2px solid white;
+      top: 1.2rem;
+      width: 1000px; }
+    #intro .side-lines:before {
+      right: 100%;
+      margin-right: 15px; }
+    #intro .side-lines:after {
+      left: 100%;
+      margin-left: 15px; }
+
+#intro-sub p {
+  font-size: 1.25rem; }
+
+#embeded-vid {
+  border: 1px solid #efefef; }
+
+.wistia_responsive_padding {
+  padding: 56.25% 0 0 0;
+  position: relative; }
+
+.wistia_responsive_wrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.wistia_embed {
+  height: 100%;
+  width: 100%; }
+
+.product-column .product-column-wrapper {
+  margin-top: 2rem; }
+  .product-column .product-column-wrapper.popular {
+    background-color: #008ba4;
+    color: #ffffff;
+    margin-top: .5rem;
+    padding-bottom: 1px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+    -moz-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+    box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75); }
+    .product-column .product-column-wrapper.popular .bundle-package {
+      margin-top: 0; }
+    .product-column .product-column-wrapper.popular .popular-text {
+      text-transform: uppercase;
+      padding: 0.25rem 0; }
+
+.product-column .bundle-package {
+  position: relative;
+  -webkit-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+  box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 2.4rem; }
+  .product-column .bundle-package .discount {
+    background-color: #e87b15;
+    width: 70px;
+    height: 70px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+    -moz-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+    box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+    color: #fff;
+    padding: 12px;
+    font-size: 1.3rem;
+    line-height: 1;
+    position: absolute;
+    top: -38px;
+    right: -27px; }
+    .product-column .bundle-package .discount .amount {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: block; }
+  .product-column .bundle-package .package-contents h2 {
+    font-size: 1.75rem; }
+  .product-column .bundle-package .package-contents h3 {
+    font-size: 1.4rem;
+    color: #008ba4; }
+  .product-column .bundle-package .pricing .price {
+    font-size: 1.6rem;
+    font-weight: bold; }
+  .product-column .bundle-package .pricing .currency {
+    text-decoration: underline;
+    display: inline-block;
+    transform: translateY(-20%);
+    font-size: .8rem; }
+  .product-column .bundle-package .pricing .price-per-day {
+    background-image: url("../images/highlight.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .product-column .bundle-package .add-to-cart {
+    position: relative;
+    padding: .5rem; }
+    .product-column .bundle-package .add-to-cart .guarantee {
+      position: absolute;
+      left: 0px;
+      top: -10px;
+      width: 75px; }
+    .product-column .bundle-package .add-to-cart .btn-primary {
+      margin-left: 50px;
+      min-width: 145px; }
+      .product-column .bundle-package .add-to-cart .btn-primary:after {
+        border-left: 14px solid white;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        width: 0;
+        height: 0;
+        content: '';
+        font-size: 0;
+        position: relative;
+        right: -10px;
+        top: -6px; }
+
+.supplement-facts h3 {
+  font-size: 2.2rem; }
+
+.supplement-facts .table-container {
+  padding: .5rem;
+  border: 3px solid; }
+
+.supplement-facts .table th, .supplement-facts .table td {
+  border: none; }
+
+.supplement-facts .amt-per-serving {
+  border-top: 15px solid;
+  border-bottom: 10px solid; }
+  .supplement-facts .amt-per-serving th {
+    padding: .3rem; }
+
+.supplement-facts .supplement-header th {
+  font-weight: normal; }
+
+.supplement-facts .supplement-source {
+  display: block;
+  font-size: .9rem; }
+
+.supplement-facts .last-with-value {
+  border-bottom: 15px solid; }
+
+.supplement-facts .supplement-footnote {
+  border-top: 15px solid; }
+
+.guarantee-column {
+  background-image: url("../images/green_bkgrnd.jpg"); }
+  .guarantee-column .guarantee {
+    background-color: white; }
+
+.as-seen-column {
+  -webkit-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+  -moz-box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75);
+  box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.75); }
+  .as-seen-column .as-seen-heading {
+    background-color: #4c813d;
+    color: white; }
+  .as-seen-column .as-seen-books-column {
+    font-weight: bold; }
+    .as-seen-column .as-seen-books-column .as-seen-book-img img {
+      width: 100%;
+      max-width: 40px; }
+    .as-seen-column .as-seen-books-column .as-seen-book-title {
+      font-size: .8rem;
+      text-align: left; }
+
+.references h2 {
+  color: #008ba4;
+  font-size: 1.7rem; }
+
+.references .full-references-link {
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  text-decoration: underline; }
+
+.buy-now {
+  position: relative;
+  padding: .5rem;
+  max-width: 350px; }
+  .buy-now .buy-now-guarantee {
+    position: absolute;
+    top: -12px;
+    width: 100px; }
+  .buy-now .lg-buy-now {
+    font-size: 1.8rem;
+    margin-left: 60px; }
+    .buy-now .lg-buy-now:after {
+      border-left: 14px solid white;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      width: 0;
+      height: 0;
+      content: '';
+      font-size: 0;
+      position: relative;
+      right: -10px;
+      top: -6px; }
+
+.footer-links {
+  list-style: none;
+  margin: 0; }
+  .footer-links li {
+    display: inline-block; }
+    .footer-links li:after {
+      content: "|";
+      color: #000000;
+      padding-left: 5px;
+      font-weight: bold; }
+    .footer-links li:last-child:after {
+      content: ""; }
+    .footer-links li a {
+      color: #66666d; }
