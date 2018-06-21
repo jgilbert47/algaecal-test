@@ -1,5 +1,6 @@
 jQuery(function () {
 
+	//*********************************************JSON data retrieval*********************************************//
 	var date = new Date(); // Get local user date/time
 	var utcWeekday = date.getUTCDay(); // Get the UTC equivalent weekday 
 	var weekday; // Variable to assign weekday so that Mon-Sun is equal to 1-7 for comparison to JSON office_hours.day
@@ -68,14 +69,14 @@ jQuery(function () {
 				}
 
 				// Loop through office hours
-				for (i = 0; i < option.office_hours.length; i++) {
+				for (i = 0; i < option['office_hours'].length; i++) {
 
 					// Get the office hours for the current day of the week
-					if ( algaecalWeekday == option.office_hours[i].day ) {
+					if ( algaecalWeekday == option['office_hours'][i].day ) {
 
 						// Get the opening and closing hours for the current weekday from the REST API
-						openTime = option.office_hours[i].starting_time;
-						closeTime = option.office_hours[i].closing_time;
+						openTime = option['office_hours'][i].starting_time;
+						closeTime = option['office_hours'][i].closing_time;
 
 						// Pad the algaecalHourOffset variable with leading and trailing zeroes to format in 24 hour, 4-digit time
 						if ( algaecalHourOffset.length = 2 ) {
@@ -98,23 +99,34 @@ jQuery(function () {
 				// Append the 7 year title to the #guarantee-title heading using the 7yr_title from the REST API
 				jQuery('#guarantee-title').append(option['7yr_title']);
 
-				// Append the 7 year long guarantee to the #guarantee-title heading using the 7yr_title from the REST API
-				//jQuery('#guarantee-long').append(option['7yr_full_copy']);
+				// Prepend the 7 year short copy to the #guarntee-content paragraph using the 7yr_short_copy from the REST API
+				// **the paragraph formatting in the JSON content does not allow for displaying all content in one paragraph**
+				//jQuery('#guarntee-content').prepend(option['7yr_short_copy']);
+
+				// Append the 7 year long copy to the #guarantee-modal-content heading using the 7yr_full_copy from the REST API
+				jQuery('#guarantee-modal-content').append(option['7yr_full_copy']);
 				
 			})			
 		}
 	});
 
+
+	//*********************************************video handler*********************************************//
 	// Hides products until video has been watched up to or clicked past 2:13
 	// Hide products container
 	jQuery("#products").hide(); 
+
 	// Bind the Wistia video
 	window._wq = window._wq || [];
+
     var videoId = "cecdwaq3dz";
     var pushObj = {};
+
     pushObj[videoId] = function (video) {
+
     	// Listener to handle video time elapsed/position
         video.bind("secondchange", function (s) {
+
             var secondsWatched = video.secondsWatched();
             var timePosition = video.time();
             // If the user watches the video for longer than 2:13, display products
@@ -125,8 +137,18 @@ jQuery(function () {
             else if (timePosition > 133) {
 				jQuery("#products").slideDown();
             }
+
         });
+
     };
     _wq.push(pushObj);
+
+
+    //*********************************************Buy Now click function*********************************************//
+    // Show the #products content if the user clicks the Buy Now button before it is displayed via the video handler
+    jQuery('#buy-now-button').click(function() {
+    	jQuery("#products").slideDown();
+    });
+
 });
 
