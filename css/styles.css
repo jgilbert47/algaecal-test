@@ -54,7 +54,7 @@ a {
 img {
   max-width: 100%; }
 
-.button, .product-column .bundle-package .add-to-cart .btn-primary, .buy-now .lg-buy-now {
+.button, .product-column .bundle-package .add-to-cart .btn-primary, .buy-now .btn-primary {
   background-color: #37a23e;
   border: none;
   -webkit-box-shadow: 0 6px 0 0 #24875b;
@@ -63,13 +63,29 @@ img {
   display: block;
   font-weight: bold;
   color: white; }
-
-.button-hover, .product-column .bundle-package .add-to-cart .btn-primary:hover, .product-column .bundle-package .add-to-cart .btn-primary:focus, .product-column .bundle-package .add-to-cart .btn-primary:active, .buy-now .lg-buy-now:hover, .buy-now .lg-buy-now:focus, .buy-now .lg-buy-now:active {
-  background-color: #319038;
-  -webkit-box-shadow: 0 6px 0 0 #24632a;
-  -moz-box-shadow: 0 6px 0 0 #24632a;
-  box-shadow: 0 6px 0 0 #24632a;
-  color: white; }
+  .button:after, .product-column .bundle-package .add-to-cart .btn-primary:after, .buy-now .btn-primary:after {
+    border-left: 14px solid white;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    width: 0;
+    height: 0;
+    content: '';
+    font-size: 0;
+    position: relative;
+    right: -10px;
+    top: -6px; }
+  .button:hover, .product-column .bundle-package .add-to-cart .btn-primary:hover, .buy-now .btn-primary:hover, .button:focus, .product-column .bundle-package .add-to-cart .btn-primary:focus, .buy-now .btn-primary:focus {
+    background-color: #319038;
+    -webkit-box-shadow: 0 6px 0 0 #24632a;
+    -moz-box-shadow: 0 6px 0 0 #24632a;
+    box-shadow: 0 6px 0 0 #24632a;
+    color: white; }
+  .button:active, .product-column .bundle-package .add-to-cart .btn-primary:active, .buy-now .btn-primary:active {
+    background-color: #319038 !important;
+    -webkit-box-shadow: 0 3px 0 0 #24632a !important;
+    -moz-box-shadow: 0 3px 0 0 #24632a !important;
+    box-shadow: 0 3px 0 0 #24632a !important;
+    transform: translate(0, 5px); }
 
 #telephone {
   font-weight: bold; }
@@ -211,21 +227,11 @@ header {
       position: absolute;
       left: 0px;
       top: -10px;
-      width: 75px; }
+      width: 75px;
+      z-index: 99; }
     .product-column .bundle-package .add-to-cart .btn-primary {
       margin-left: 50px;
       min-width: 145px; }
-      .product-column .bundle-package .add-to-cart .btn-primary:after {
-        border-left: 14px solid white;
-        border-top: 7px solid transparent;
-        border-bottom: 7px solid transparent;
-        width: 0;
-        height: 0;
-        content: '';
-        font-size: 0;
-        position: relative;
-        right: -10px;
-        top: -6px; }
 
 .supplement-facts h3 {
   font-size: 2.2rem; }
@@ -294,21 +300,11 @@ header {
   .buy-now .buy-now-guarantee {
     position: absolute;
     top: -12px;
-    width: 100px; }
-  .buy-now .lg-buy-now {
+    width: 100px;
+    z-index: 99; }
+  .buy-now .btn-primary {
     font-size: 1.8rem;
     margin-left: 60px; }
-    .buy-now .lg-buy-now:after {
-      border-left: 14px solid white;
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      width: 0;
-      height: 0;
-      content: '';
-      font-size: 0;
-      position: relative;
-      right: -10px;
-      top: -6px; }
 
 .footer-links {
   list-style: none;
