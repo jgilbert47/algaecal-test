@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- jQuery script required for Bootstrap 4 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!-- Popper script required for modal popup -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><!-- Bootstrap script -->
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- Bootstrap CSS -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> <!-- Google Roboto font -->
         <link rel="stylesheet" type="text/css" href="../css/styles.css"> <!-- Main page css -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jQuery library --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jQuery ajax script --> 
         <script src="../js/main.js"></script> <!-- main script -->
 
         <title>AlgaeCal Plus &amp; Strontium Boost</title>
@@ -22,7 +24,7 @@
                             <a href="https://www.algaecal.com/"><img src="../images/algaecal_logo.jpg" alt="AlgaeCal" /></a>
                         </div>
                         <div id="telephone" class="col-sm-12 col-md-6 col-lg-9 p-2">
-                            <p id="default-number"></p>
+                            <p id="default-number"><!-- Populated by JSON data retrieval ajax call in main.js --></p>
                             <p id="open-message" class="phone">Speak to our Bone Health Specialists!</p>
                         </div>
                     </div>
@@ -227,8 +229,8 @@
                     <div class="guarantee-column col-12 col-lg-8 offset-lg-2 p-4">
                         <div class="guarantee col-12 p-3">
                             <img class="guarantee-seal d-block ml-auto mr-auto mt-2 mb-4" src="../images/guarantee-seal.png" alt="Stronger bones for 7 years, guaranteed" />
-                            <h2 id="guarantee-title"></h2>
-                            <p>When you follow directions for use of AlgaeCal Plus and Strontium Boost - we guarantee you will see increased bone density in EVERY follow-up bone scan you have while ausing these 2 products -  or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years! Also, if you are unsatisfied at any time you can return my product for a full refund, no questions asked! <a href="">Click Here for Details</a></p>
+                            <h2 id="guarantee-title"><!-- Populated by JSON data retrieval ajax call in main.js --></h2>
+                            <p id="guarntee-content">When you follow directions for use of AlgaeCal Plus and Strontium Boost - we guarantee you will see increased bone density in EVERY follow-up bone scan you have while ausing these 2 products -  or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years! Also, if you are unsatisfied at any time you can return my product for a full refund, no questions asked! <a href="#guarantee-modal" data-toggle="modal">Click Here for Details</a></p>
                             <div class="guarantee-ceo col-12 text-center">
                                 <img id="guarantee-ceo-img" class="d-block ml-auto mr-auto" src="../images/dean-neuls.jpg" alt="Dean Neuls is CEO &amp; Co-Founder of AlgaeCal Inc." />
                                 <div class="guarantee-ceo-info d-inline-block ml-auto mr-auto text-left">
@@ -276,8 +278,8 @@
                 <h2 class="text-center mb-0">Scientific References</h2>
                 <div class="row p-3">
                     <ol>
-                        <li>Marques A, Ferreira RJ, Santos E, et al. The accuracy of osteoporotic fracture risk prediction tools: a systematic review and meta-analysis. Ann Rheum Dis. 2015 Nov;74(11):1958-67/ doi: 10.1136/annrheumdis-2015-207907. Epub 2015 Aug 6. PMID: 26248637.</li>
-                        <li>Riggs BL, Melton LJ 3rd. The worldwide problem of osteoporosis: insights afforded by epidemiology. Bone. 1995 Nov:17(5 Suppl):505S-511S. PMID: 8573428</li>
+                        <li>Marques A, Ferreira RJ, Santos E, et al. The accuracy of osteoporotic fracture risk prediction tools: a systematic review and meta-analysis. Ann Rheum Dis. 2015 Nov;74(11):1958-67. doi: 10.1136/annrheumdis-2015-207907. Epub 2015 Aug 6. PMID: 26248637.</li>
+                        <li>Riggs BL, Melton LJ 3rd. The worldwide problem of osteoporosis: insights afforded by epidemiology. Bone. 1995 Nov;17(5 Suppl):505S-511S. PMID: 8573428</li>
                         <li>https://www.algaecal.com/expert-insights/prescription-drugs-that-cause-osteoporosis/</li>
                     </ol>
                     <p class="full-references-link text-center"><a href="#">View Full Reference List...</a></p>                        
@@ -288,11 +290,27 @@
                 <div class="buy-now-guarantee">
                     <img src="../images/button-guarantee-lg.png" alt="Stronger bones for 7 years, guaranteed" />
                 </div>
-                <a class="lg-buy-now btn btn-primary" href="#products" role="button">Buy Now</a>
+                <a id="buy-now-button" class="lg-buy-now btn btn-primary" href="#products" role="button">Buy Now</a>
             </div>
 
-            <div id="guarantee-long" class="container">
-            </div><!-- end container -->    
+            <!-- Popup modal opens when the user clicks the 7 year guarantee link -->
+            <div class="modal fade" id="guarantee-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div id="guarantee-modal-content" class="modal-body">
+                        <!-- Populated by JSON data retrieval ajax call in main.js -->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>  
 
             <footer>
                 <div class="container">
