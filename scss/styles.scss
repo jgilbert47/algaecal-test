@@ -40,14 +40,28 @@ img {
 	display: block;
 	font-weight: bold;
 	color: white;
-}
 
-.button-hover {
-	background-color: $buttonHoverColor;
-	-webkit-box-shadow: 0 6px 0 0 $buttonBottomHoverColor;
-	-moz-box-shadow: 0 6px 0 0 $buttonBottomHoverColor;
-	box-shadow: 0 6px 0 0 $buttonBottomHoverColor;	
-	color: white;
+	&:after {
+		@include right-arrow(white);
+		right: -10px;
+		top: -6px;
+	}
+
+	&:hover, &:focus {					
+		background-color: $buttonHoverColor;
+		-webkit-box-shadow: 0 6px 0 0 $buttonBottomHoverColor;
+		-moz-box-shadow: 0 6px 0 0 $buttonBottomHoverColor;
+		box-shadow: 0 6px 0 0 $buttonBottomHoverColor;	
+		color: white;
+	}
+
+	&:active {
+		background-color: $buttonHoverColor !important;
+		-webkit-box-shadow: 0 3px 0 0 $buttonBottomHoverColor !important;
+		-moz-box-shadow: 0 3px 0 0 $buttonBottomHoverColor !important;
+		box-shadow: 0 3px 0 0 $buttonBottomHoverColor !important;	
+		transform: translate(0,5px);
+	}
 }
 
 #telephone {
@@ -226,22 +240,13 @@ header {
 			    left: 0px;
     			top: -10px;
     			width: 75px;
+    			z-index: 99;
 			}
 
 			.btn-primary {
 			    @extend .button;
 			    margin-left: 50px;
 			    min-width: 145px;
-
-			    &:after {
-					@include right-arrow(white);
-				    right: -10px;
-				    top: -6px;
-				}
-
-				&:hover, &:focus, &:active {					
-				    @extend .button-hover;
-				}
 			}
 		}
 	}
@@ -347,22 +352,13 @@ header {
 	    position: absolute;
 	    top: -12px;
 	    width: 100px;
+    	z-index: 99;
 	}
 
-	.lg-buy-now {
+	.btn-primary {
 		@extend .button;
 		font-size: 1.8rem;
     	margin-left: 60px;
-
-		&:after {
-			@include right-arrow(white);
-			right: -10px;
-			top: -6px;
-		}
-
-		&:hover, &:focus, &:active {					
-			@extend .button-hover;
-		}
 	}
 }
 
